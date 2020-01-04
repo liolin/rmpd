@@ -335,11 +335,19 @@ mod test {
         ];
 
         for value in values_as_string.iter() {
-            println!(
-                "testing {} => {}",
+            assert_eq!(
                 *value,
-                MPDCommand::from_str(value).unwrap()
+                MPDCommand::from_str(value).unwrap().to_string()
             );
         }
+    }
+
+    #[test]
+    fn test_parse_with_command_list() {
+	// command_list_begin / command_list_ok_begin
+	//     volume 86
+	//     play 10240
+	//     status
+	// command_list_end
     }
 }
