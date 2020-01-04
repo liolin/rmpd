@@ -9,3 +9,4 @@ edition = "2018"
 [dependencies]
 log = "0.4"
 simple_logger = "1.4.0"
+tokio = { version = "0.2", features = ["full"] }
