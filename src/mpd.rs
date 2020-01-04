@@ -3,6 +3,8 @@ use std::io::prelude::*;
 
 use log::info;
 
+pub static MPD_VERSION: &str = "0.16.0";
+
 #[derive(Debug, Eq, PartialEq)]
 pub struct MPDCommand {
     command: String,
